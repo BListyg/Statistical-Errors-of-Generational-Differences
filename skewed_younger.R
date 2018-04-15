@@ -42,9 +42,7 @@ agesim <- function(x,y){
   #As you get older, you are less entitiled 
   age_data$age <- round(scales::rescale(age_data$X1, to = c(22,75)),0)
   
-  #Creating a fictional "entitlement" outcome and rescaling to be a Likert type response
-  age_data$Y <- age_data$Y + rnorm(n = y, mean = 0, sd = 1)
-  
+  #Creating a fictional "entitlement" outcome and rescaling to be a Likert type response  
   age_data$entitlement <- round(scales::rescale(age_data$Y, to = c(1,5)),0)
   
   #Creating generational bins how it's done now
