@@ -60,9 +60,7 @@ agesim <- function(x,y){
   #Creating a fictional "entitlement" outcome and rescaling to be a Likert type response
   
   #Adding in measurement error as a N ~ (0,1) rv to the original Y true score (not rescaled yet) variable
-  
-  age_data$Y <- age_data$Y + rnorm(n = y, mean = 0, sd = 1)
-  
+   
   age_data$entitlement <- round(scales::rescale(age_data$Y, to = c(1,5)),0)
   
   #Creating generational bins how it's done now
