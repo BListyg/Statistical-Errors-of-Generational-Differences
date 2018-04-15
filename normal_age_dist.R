@@ -126,7 +126,7 @@ c <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,3])
 
 matplot(a, type = "c",
         ylim = c(0,1),
-        ylab = "MAE", 
+        ylab = "RMSE", 
         col = "black",
         xaxt = "n")
 
