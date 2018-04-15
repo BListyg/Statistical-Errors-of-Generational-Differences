@@ -118,33 +118,33 @@ agesim <- function(x,y){
   )))
 }
 
-a <- replicate(50,t(apply(matrix(seq(0.01,0.99,.01)), 1, FUN = agesim, y=300))[,1])
+a <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,1])
 
-b <- replicate(50,t(apply(matrix(seq(0.01,0.99,.01)), 1, FUN = agesim, y=300))[,2])
+b <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,2])
 
-c <- replicate(50,t(apply(matrix(seq(0.01,0.99,.01)), 1, FUN = agesim, y=300))[,3])
+c <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,3])
 
 matplot(a, type = "c",
         ylim = c(0,1),
-        ylab = "RMSE", 
-        xaxt = "n",
-        col = "black")
+        ylab = "MAE", 
+        col = "black",
+        xaxt = "n")
 
-title(main = "Age ~ Normal, Negatively related w/ Entitlement", sub = "R^2")
+axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
-axis(side = 1, at = seq(0,100,20), label = seq(0,1,.2))
+title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
 
-matlines(b, type = "c", ylim = c(0,1))
+matlines(b, type = "c", ylim = c(0,1), col = "black")
 
-matlines(c, type = "c", ylim = c(0,1))
+matlines(c, type = "c", ylim = c(0,1), col = "black")
 
-matlines(rowMeans(a), type = "l", lwd = 3, col = "yellow")
+matlines(rowMeans(a), type = "s", lwd = 5, col = "yellow")
 
-matlines(rowMeans(b), type = "l", lwd = 3, col = "orange")
+matlines(rowMeans(b), type = "s", lwd = 5, col = "orange")
 
-matlines(rowMeans(c), type = "l", lwd = 3, col = "red")
+matlines(rowMeans(c), type = "s", lwd = 5, col = "red")
 
-legend("bottomleft",legend = c("Randomly Assigned Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
+legend("bottomleft",legend = c("Random Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
 
 d <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,4])
 
@@ -155,21 +155,21 @@ f <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,6])
 matplot(d, type = "c",
         ylim = c(0,1),
         ylab = "MAE", 
-        xaxt = "n",
-        col = "black")
+        col = "black",
+        xaxt = "n")
 
-title(main = "Age ~ Normal, Negatively related w/ Entitlement", sub = "R^2")
+axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
-axis(side = 1, at = seq(0,100,20), label = seq(0,1,.2))
+title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
 
-matlines(e, type = "c", ylim = c(0,1))
+matlines(e, type = "c", ylim = c(0,1), col = "black")
 
-matlines(f, type = "c", ylim = c(0,1))
+matlines(f, type = "c", ylim = c(0,1), col = "black")
 
-matlines(rowMeans(d), type = "l", lwd = 3, col = "yellow")
+matlines(rowMeans(d), type = "s", lwd = 5, col = "yellow")
 
-matlines(rowMeans(e), type = "l", lwd = 3, col = "orange")
+matlines(rowMeans(e), type = "s", lwd = 5, col = "orange")
 
-matlines(rowMeans(f), type = "l", lwd = 3, col = "red")
+matlines(rowMeans(f), type = "s", lwd = 5, col = "red")
 
-legend("bottomleft",legend = c("Randomly Assigned Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
+legend("bottomleft",legend = c("Random Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
