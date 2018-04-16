@@ -50,7 +50,7 @@ agesim <- function(x,y){
   
   #Creating a fictional "entitlement" outcome and rescaling to be a Likert type response
     
-  age_data$entitlement <- round(scales::rescale(age_data$Y, to = c(1,5)),0)
+  age_data$entitlement <- round(scales::rescale(age_data$Y, to = c(10,50)),0)
   
   #Creating generational bins how it's done now
   age_data$gen1[age_data$age<=35] <- "Millenial"
