@@ -5,7 +5,8 @@ There's copious methodological research that demonstrates the negative effects c
 To do this, I created 3 functions that do the following:
 
 * Generate X and Y variables with user-defined R^2 and sample size
-  *Note: For the purpose of this simulation I made age and the outcome variable (what I call "Entitlement", negatively related such that as age increases Entitlement decreases. Further, I added a vector of N~(0,1) values to the Y variable before it was rescaled to add in measurement error. I will probably take this out later as I am still fine-tuning this.
+  
+  * Note: For the purpose of this simulation I made age and the outcome variable (what I call "Entitlement", negatively related such that as age increases Entitlement decreases. Further, I added a vector of N~(0,1) values to the Y variable before it was rescaled to add in measurement error. I will probably take this out later as I am still fine-tuning this.
   
 * Rescale the Y variable to be placed on a typical 5-point Likert scale
 
