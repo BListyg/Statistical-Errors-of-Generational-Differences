@@ -10,7 +10,7 @@ To do this, I created 3 functions that do the following:
   
   * Update 2018-04-17: Took out measurement error  
   
-* Rescale the Y variable to be placed on a typical 5-point Likert scale
+* Rescale the Y variable to be placed on a typical 5-point Likert scale with 10 totals items, thus rescale goes from 10 to 50.
 
 * Rescale the X variables to be placed within a 22 to 75 range (typical age range of people within the workforce).
 
