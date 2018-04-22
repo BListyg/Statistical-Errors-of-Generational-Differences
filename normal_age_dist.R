@@ -136,11 +136,11 @@ matlines(b, type = "c", ylim = c(0,15), col = "black")
 
 matlines(c, type = "c", ylim = c(0,15), col = "black")
 
-matlines(rowMeans(a), type = "s", lwd = 5, col = "yellow")
+matlines(rowMeans(a), type = "l", lwd = 5, col = "yellow")
 
-matlines(rowMeans(b), type = "s", lwd = 5, col = "orange")
+matlines(rowMeans(b), type = "l", lwd = 5, col = "orange")
 
-matlines(rowMeans(c), type = "s", lwd = 5, col = "red")
+matlines(rowMeans(c), type = "l", lwd = 5, col = "red")
 
 legend("bottomleft",legend = c("Random Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
 
@@ -164,10 +164,10 @@ matlines(e, type = "c", ylim = c(0,15), col = "black")
 
 matlines(f, type = "c", ylim = c(0,15), col = "black")
 
-matlines(rowMeans(d), type = "s", lwd = 5, col = "yellow")
+matlines(rowMeans(d), type = "l", lwd = 5, col = "yellow")
 
-matlines(rowMeans(e), type = "s", lwd = 5, col = "orange")
+matlines(rowMeans(e), type = "l", lwd = 5, col = "orange")
 
-matlines(rowMeans(f), type = "s", lwd = 5, col = "red")
+matlines(rowMeans(f), type = "l", lwd = 5, col = "red")
 
 legend("bottomleft",legend = c("Random Generations", "Normal Generations", "Continuous Age"), col = c("red", "orange", "yellow"), lwd = "2")
