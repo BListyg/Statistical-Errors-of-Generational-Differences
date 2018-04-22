@@ -123,7 +123,7 @@ b <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,2])
 c <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,3])
 
 matplot(a, type = "c",
-        ylim = c(0,5),
+        ylim = c(0,15),
         ylab = "RMSE", 
         col = "black",
         xaxt = "n")
@@ -132,9 +132,9 @@ axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
 title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
 
-matlines(b, type = "c", ylim = c(0,5), col = "black")
+matlines(b, type = "c", ylim = c(0,15), col = "black")
 
-matlines(c, type = "c", ylim = c(0,5), col = "black")
+matlines(c, type = "c", ylim = c(0,15), col = "black")
 
 matlines(rowMeans(a), type = "s", lwd = 5, col = "yellow")
 
@@ -151,7 +151,7 @@ e <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,5])
 f <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,6])
 
 matplot(d, type = "c",
-        ylim = c(0,5),
+        ylim = c(0,15),
         ylab = "MAE", 
         col = "black",
         xaxt = "n")
@@ -160,9 +160,9 @@ axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
 title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
 
-matlines(e, type = "c", ylim = c(0,5), col = "black")
+matlines(e, type = "c", ylim = c(0,15), col = "black")
 
-matlines(f, type = "c", ylim = c(0,5), col = "black")
+matlines(f, type = "c", ylim = c(0,15), col = "black")
 
 matlines(rowMeans(d), type = "s", lwd = 5, col = "yellow")
 
