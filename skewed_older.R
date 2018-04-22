@@ -121,9 +121,9 @@ axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
 title(main = "Age skewed towards older participants w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
 
-matlines(b, type = "c", ylim = c(0,1), col = "black")
+matlines(b, type = "c", ylim = c(0,5), col = "black")
 
-matlines(c, type = "c", ylim = c(0,1), col = "black")
+matlines(c, type = "c", ylim = c(0,5), col = "black")
 
 matlines(rowMeans(a), type = "s", lwd = 5, col = "yellow")
 
