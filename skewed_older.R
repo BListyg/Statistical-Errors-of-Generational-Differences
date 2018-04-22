@@ -112,7 +112,7 @@ b <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,2])
 c <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,3])
 
 matplot(a, type = "c",
-        ylim = c(0,1),
+        ylim = c(0,5),
         ylab = "RMSE", 
         col = "black",
         xaxt = "n")
@@ -140,7 +140,7 @@ e <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,5])
 f <- replicate(50,t(apply(matrix(seq(0.1,0.9,.1)), 1, FUN = agesim, y=300))[,6])
 
 matplot(d, type = "c",
-        ylim = c(0,1),
+        ylim = c(0,5),
         ylab = "MAE", 
         col = "black",
         xaxt = "n")
