@@ -6,7 +6,7 @@
 
 agesim <- function(x,y){
   
-  sim_data <- function(r2, n, p) {
+  sim_data <- function(r, n, p) {
     
     p = 1
     
@@ -39,7 +39,7 @@ agesim <- function(x,y){
   #Doing a simple univariate
   #regression
   
-  age_data <- sim_data(r2 = x,
+  age_data <- sim_data(r = sqrt(x),
                        n = y)
   
   #Created an age variable that rescales X1 to vary between 22 (entry into workforce) and 75 (leaving workforce)
@@ -147,7 +147,7 @@ matplot(d, type = "c",
 
 axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
-title(main = "Age skewed towards older participants w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
+title(main = "Age skewed towards older participants w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R")
 
 matlines(e, type = "c", ylim = c(0,15), col = "black")
 
