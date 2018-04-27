@@ -16,7 +16,7 @@ library(MASS)
 library(sn)
 library(arm)
 
-sim_data <- function(r2 = .2, n = 1e6, p = 5, adjusted.r.square = FALSE) {
+sim_data <- function(r = .2, n = 1e6, p = 5, adjusted.r.square = FALSE) {
   
   # Make symmetric covariance matrix with ...
   # ... all variance = 1 and covariances = 0 ...
@@ -47,7 +47,7 @@ agesim <- function(x,y){
   #Doing a simple univariate
   #regression
   
-  age_data = sim_data(r2 = x,
+  age_data = sim_data(r = sqrt(x),
                       n = y,
                       p = 1)
   
@@ -130,7 +130,7 @@ matplot(a, type = "c",
 
 axis(side = 1, at = seq(0,9,1), label = seq(0.0,0.9,.1))
 
-title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R^2")
+title(main = "Age Normally Distributed w/i sample \nAge negatively related w/ Entitlement \nn = 300, 50 repititions", sub = "R")
 
 matlines(b, type = "c", ylim = c(0,15), col = "black")
 
